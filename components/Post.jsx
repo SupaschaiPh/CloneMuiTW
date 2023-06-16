@@ -78,13 +78,13 @@ export default function Post({
                   'aria-labelledby': 'postMore' + moreId,
                 }}
               >
-                <MenuItem className="font-sans">ไม่สนใจโพสนี้</MenuItem>
-                <MenuItem className="font-sans">เลิกติดตาม</MenuItem>
+                <MenuItem >ไม่สนใจโพสนี้</MenuItem>
+                <MenuItem >เลิกติดตาม</MenuItem>
               </Menu>
             </div>
           </div>
           <div>
-            <Typography>{content}</Typography>
+            <div className="pr-3 pl-3" ><div>{content}</div></div>
           </div>
           {img ? (
             <div className="p-3 pb-0 pt-2">

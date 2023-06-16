@@ -49,7 +49,7 @@ export default function Leftbar(){
     setNewPostModalOpen: (val)=>{setNewPostModalOpen(val)}
   }
   return (
-    <header className="flex flex-col h-full border-r w-3/12 max-lg:w-fit border-gray-100 max-lg:items-end max-sm:hidden sticky top-0 overflow-hidden">
+    <header className="flex flex-col h-screen border-r w-3/12 max-lg:w-fit border-gray-100 max-lg:items-end max-sm:hidden sticky top-0 overflow-hidden">
       <div className="pt-1 flex flex-col h-screen justify-between" >
         <div className="flex flex-col">
           <div className="ml-5 mt-0 mb-0 self-start max-lg-:self-center">

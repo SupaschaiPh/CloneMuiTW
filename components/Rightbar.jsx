@@ -16,7 +16,7 @@ export default function Rightbar() {
     <div className="border-l w-3/12 border-gray-100 max-lg:hidden">
       <HeadSearch />
       <div className="p-5 sticky top-0">
-        <Paper className="p-3 mb-5">
+        <Paper sx={{p:3,mb:3}}>
           <h6  className="text-xl font-bold">
             รับการยืนยัน
           </h6>
@@ -26,17 +26,17 @@ export default function Rightbar() {
           <Button
             color="secondary"
             variant="contained"
-            className="bg-black rounded-full"
+            
           >
             <p>รับการยืนยัน</p>
           </Button>
         </Paper>
-        <Paper className="p-3 h-full mb-5">
+        <Paper sx={{p:3,mb:3}}>
           <Typography variant="h6" className="font-bold">
             ความนิยมสำหรับคุณ
           </Typography>
         </Paper>
-        <Paper className="p-3 h-full">
+        <Paper sx={{p:3,mb:3}}>
           <Typography variant="h6" className="font-bold">
             ติดตามใครดี
           </Typography>

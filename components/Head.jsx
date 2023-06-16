@@ -8,7 +8,7 @@ export default function Head(props){
   return (
     <div className="border-b border-gray-100 w-full sticky top-0 bg-white/80 z-50 backdrop-blur	" >
       <div className="flex justify-between p-3">
-        <Typography variant="h6" className="text-black font-bold" >{props.name}</Typography>
+        <h6 className="text-black font-bold text-xl" >{props.name}</h6>
         {<IconButton className="text-black">{props.icon}</IconButton>}
       </div>
       <Tabs variant="fullWidth" textColor="secondary" value={indexTab} onChange={(e,newVal)=>{setIndexTab(newVal)}} className="text-black  w-full" >
