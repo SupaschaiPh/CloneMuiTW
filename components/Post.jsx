@@ -44,7 +44,7 @@ export default function Post({
                 sx={{ fontSize: 5 }}
                 className="text-gray-400 font-light"
               />
-              <Typography className="font-sans text-gray-400 font-light">
+              <Typography>
                 {postTime}.
               </Typography>
             </div>
@@ -56,7 +56,7 @@ export default function Post({
                   }}
                   size="small"
                 >
-                  <MoreHorizRoundedIcon className="text-base" />
+                  <MoreHorizRoundedIcon fontSize="small" />
                 </IconButton>
               </Tooltip>
               <Menu
@@ -83,7 +83,9 @@ export default function Post({
               </Menu>
             </div>
           </div>
-          <Typography className="font-sans pr-3 pl-3">{content}</Typography>
+          <div>
+            <Typography>{content}</Typography>
+          </div>
           {img ? (
             <div className="p-3 pb-0 pt-2">
               <img src={img} className="rounded-xl border border-gray-200" />
@@ -93,7 +95,7 @@ export default function Post({
           )}
         </div>
       </div>
-      <ButtonGroup className="w-full pt-3 flex justify-around">
+      <div className="w-full pt-3 flex justify-around">
         <Tooltip title="ตอบกลับ">
           <IconButton>
             {' '}
@@ -113,7 +115,7 @@ export default function Post({
                 setHeart(true);
               }}
             >
-              <FavoriteBorderRoundedIcon className="text-base " />
+              <FavoriteBorderRoundedIcon fontSize="small" />
             </IconButton>
           </Tooltip>
         ) : (
@@ -124,12 +126,12 @@ export default function Post({
                   setHeart(false);
                 }}
               >
-                <FavoriteRoundedIcon className="text-base text-red-500" />
+                <FavoriteRoundedIcon fontSize="small" className="text-red-500" />
               </IconButton>
             </Tooltip>
           </Zoom>
         )}
-      </ButtonGroup>
+      </div>
     </Box>
   );
 }

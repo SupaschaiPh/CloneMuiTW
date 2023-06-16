@@ -12,8 +12,12 @@ export default function Profile(){
             <Typography className="font-light font-sans text-gray-500" >@MuiTwitterClone</Typography>
           </div>
         </div>
-        <MoreHorizRoundedIcon className="text-xl max-lg:hidden" />
-        <Avatar className="lg:hidden" />
+        <div className="text-xl max-lg:hidden">
+          <MoreHorizRoundedIcon/>
+        </div>
+        <div className="lg:hidden">
+        <Avatar />
+        </div>
       </a>
       
     </div>

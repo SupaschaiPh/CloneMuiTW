@@ -20,17 +20,21 @@ const pageIcons = [<HomeRoundedIcon className="text-3xl " />,<SearchRoundedIcon 
 <CheckCircleRoundedIcon className="text-3xl " />, <PersonRoundedIcon className="text-3xl " />,
 <MoreHorizRoundedIcon className="text-3xl " />  ]
 const listt = ()=>{
-  return <div className="flex flex-col gap-3 lg:gap-4 p-5">
+  return <div className="flex flex-col gap-2 lg:gap-4 p-5">
     {pages.map(
       (page,index)=>{
         return (
-          <Link key={"Rightbar"+page} href={"/"+(hrefPages[index] ? hrefPages[index] : "")} underline="none">
-              <IconButton className="lg:hidden text-black w-fit p-2">
+          <Link key={"Rightbar"+index} href={"/"+(hrefPages[index] ? hrefPages[index] : "")} underline="none">
+            <div className="hidden max-lg:block text-black w-fit p-2">
+              <IconButton >
                 {pageIcons[index]}
               </IconButton>
-              <Button startIcon={<div className="text-xl">{pageIcons[index]}</div>} className="max-lg:hidden gap-3 rounded-full text-xl font-semibold text-black pr-2 pl-2">
-                <p>{page.toString()}</p>
-              </Button>
+            </div>
+            <div className="max-lg:hidden gap-3 rounded-full text-xl font-semibold text-black pr-2 pl-2">
+                <Button color="secondary" startIcon={<div className="text-xl">{pageIcons[index]}</div>} >
+                  {page}
+                </Button>
+            </div>
           </Link>
         )
       }
@@ -45,18 +49,24 @@ export default function Leftbar(){
     setNewPostModalOpen: (val)=>{setNewPostModalOpen(val)}
   }
   return (
-    <header className="flex flex-col h-full border-r w-3/12 max-lg:w-fit border-gray-100 max-lg:items-end max-sm:hidden sticky top-0">
+    <header className="flex flex-col h-full border-r w-3/12 max-lg:w-fit border-gray-100 max-lg:items-end max-sm:hidden sticky top-0 overflow-hidden">
       <div className="pt-1 flex flex-col h-screen justify-between" >
         <div className="flex flex-col">
-            <IconButton className="ml-5 mt-0 mb-0 self-start max-lg-:self-center">
+          <div className="ml-5 mt-0 mb-0 self-start max-lg-:self-center">
+            <IconButton>
               <Avatar className="h-8 w-8" src="https://img.freepik.com/free-photo/white-cloud-blue-sky_74190-7709.jpg"/>
             </IconButton>
+            </div>
             {listt()}
           <div className="w-full p-2 pr-6 pl-6">
-            <IconButton color="primary" sx={{width:45,height:45}} className="p-2 rounded-full hidden max-lg:block bg-sky-500 " variant="contained">         
-              <CreateRoundedIcon className="text-white m-0 p-0" /> 
-            </IconButton>
-            <Button onClick={()=>setNewPostModalOpen(true)} variant="contained" className="w-full bg-sky-500 rounded-full p-2.5 font-bold text-md max-lg:hidden">โพส</Button>
+            <div style={{width:50,height:50}} className="hidden max-lg:block flex justify-center " >
+              <Button color="primary" variant="contained" sx={{borderRadius:"100%",p:2,width:50,height:50}}>         
+                <CreateRoundedIcon fontSize="small" /> 
+              </Button>
+            </div>
+            <div className="w-full rounded-full p-2.5 font-bold text-md max-lg:hidden" >
+              <Button fullWidth onClick={()=>setNewPostModalOpen(true)} variant="contained" >โพส</Button>
+            </div>
           </div>
         </div>
         <div className="justify-self-end	w-full">

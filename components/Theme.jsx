@@ -17,7 +17,7 @@ export const theme1 = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Noto Sans Thai Looped',
+    fontFamily: "'Noto Sans Thai Looped','Noto Sans Thai',sans-serif",
   },
   props: {
     MuiAppBar: {
