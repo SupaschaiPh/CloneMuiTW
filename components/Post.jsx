@@ -42,7 +42,7 @@ export default function Post({
               </Typography>
               <FiberManualRecordRoundedIcon
                 sx={{ fontSize: 5 }}
-                className="text-gray-400 font-light"
+                fontSize="small"
               />
               <Typography>
                 {postTime}.
@@ -99,13 +99,13 @@ export default function Post({
         <Tooltip title="ตอบกลับ">
           <IconButton>
             {' '}
-            <ChatBubbleOutlineRoundedIcon className="text-base" />{' '}
+            <ChatBubbleOutlineRoundedIcon fontSize="small" />{' '}
           </IconButton>
         </Tooltip>
         <Tooltip title="รีโพส">
           <IconButton>
             {' '}
-            <ReplyRoundedIcon className="text-base" />{' '}
+            <ReplyRoundedIcon fontSize="small" />{' '}
           </IconButton>
         </Tooltip>
         {!heart ? (

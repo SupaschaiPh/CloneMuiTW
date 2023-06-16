@@ -48,40 +48,42 @@ export default function NewPostModal(){
           </div>
           {descPostScope[postScope]}
         </DialogContent>
-        <DialogActions className="justify-between border-t border-gray-100" >
-          <div className="flex">
-            <Tooltip title="สื่อ" >
-              <div>
-                <IconButton color="primary" size="small"> <PhotoRoundedIcon /> </IconButton>
-              </div> 
-            </Tooltip>
-            <Tooltip title="Gif"> 
-              <div>
-                <IconButton color="primary" size="small"> <SquareRoundedIcon  /> </IconButton> 
-              </div>
-            </Tooltip>
-            <Tooltip title="โพล"> 
-              <div>
-                <IconButton color="primary" size="small"> <BallotRoundedIcon  /> </IconButton> 
-              </div>
-            </Tooltip>
-            <Tooltip title="อีโมจิ"> 
-              <div>
-                <IconButton color="primary" size="small"> <EmojiEmotionsRoundedIcon  /> </IconButton> 
-              </div>
-            </Tooltip>
-            <Tooltip title="กำหนดเวลา"> 
-              <div>
-                <IconButton color="primary" size="small"> <EventRoundedIcon  /> </IconButton> 
-              </div>
-            </Tooltip>
-            <Tooltip title="ตำแหน่ง"> 
-              <div>
-                <IconButton color="primary" size="small"> <LocationOnRoundedIcon  /> </IconButton> 
-              </div>
-            </Tooltip>
+        <DialogActions>
+          <div className="flex justify-between border-t border-gray-100 w-full p-2" >
+            <div className="flex">
+              <Tooltip title="สื่อ" >
+                <div>
+                  <IconButton color="primary" size="small"> <PhotoRoundedIcon /> </IconButton>
+                </div> 
+              </Tooltip>
+              <Tooltip title="Gif"> 
+                <div>
+                  <IconButton color="primary" size="small"> <SquareRoundedIcon  /> </IconButton> 
+                </div>
+              </Tooltip>
+              <Tooltip title="โพล"> 
+                <div>
+                  <IconButton color="primary" size="small"> <BallotRoundedIcon  /> </IconButton> 
+                </div>
+              </Tooltip>
+              <Tooltip title="อีโมจิ"> 
+                <div>
+                  <IconButton color="primary" size="small"> <EmojiEmotionsRoundedIcon  /> </IconButton> 
+                </div>
+              </Tooltip>
+              <Tooltip title="กำหนดเวลา"> 
+                <div>
+                  <IconButton color="primary" size="small"> <EventRoundedIcon  /> </IconButton> 
+                </div>
+              </Tooltip>
+              <Tooltip title="ตำแหน่ง"> 
+                <div>
+                  <IconButton color="primary" size="small"> <LocationOnRoundedIcon  /> </IconButton> 
+                </div>
+              </Tooltip>
+            </div>
+            <Button variant="contained" color="primary" >โพส</Button>
           </div>
-          <Button variant="contained" color="primary" >โพส</Button>
         </DialogActions>
     </Dialog>
   )
