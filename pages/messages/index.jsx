@@ -23,12 +23,12 @@ import MessageInbox from '../../components/MessageInbox';
 export default function Message() {
   return (
     <Layout2 rightbar={<Rightbar />}>
-      <div className="w-4/12 border-r border-gray-100 p-3">
+      <div className="w-4/12 border-r border-gray-100 p-3 max-md:hidden">
         <Typography variant="h6" className="font-semibold">
           ข้อความ
         </Typography>
       </div>
-      <div className="w-5/12 grid grid-cols-1 h-screen border-r border-gray-100">
+      <div className="w-5/12 grid grid-cols-1 h-screen border-r border-gray-100 max-md:w-8/12 max-sm:w-full">
         <MessageInbox/>
       </div>
     </Layout2>

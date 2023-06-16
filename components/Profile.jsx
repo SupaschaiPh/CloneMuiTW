@@ -8,8 +8,8 @@ export default function Profile(){
         <div className="flex items-center max-lg:hidden">
           <Avatar className="mr-3" />
           <div >
-            <Typography className="font-semibold font-sans" >MuiTwitterClone</Typography>
-            <Typography className="font-light font-sans text-gray-500" >@MuiTwitterClone</Typography>
+            <Typography>MuiTwitterClone</Typography>
+            <div className="text-gray-500" >@MuiTwitterClone</div>
           </div>
         </div>
         <div className="text-xl max-lg:hidden">

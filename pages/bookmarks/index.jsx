@@ -15,9 +15,9 @@ export default function Home() {
           <Typography variant="h4" className="font-semibold mt-8">
             บันทึกทวีตไว้ดูภายหลัง
           </Typography>
-          <Typography className="mt-2  text-gray-500">
-          อย่าปล่อยให้ทวีตดีๆ บินหนีหายไป บุ๊คมาร์กทวีตเพื่อให้ค้นหาอีกครั้งได้ง่ายๆ ในอนาคต
-          </Typography>
+          <div className="mt-2  text-gray-500">
+            <div>อย่าปล่อยให้ทวีตดีๆ บินหนีหายไป บุ๊คมาร์กทวีตเพื่อให้ค้นหาอีกครั้งได้ง่ายๆ ในอนาคต</div>
+          </div>
         </div>
       </div>
     </Layout>

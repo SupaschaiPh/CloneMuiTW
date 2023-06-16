@@ -81,7 +81,7 @@ export default function NewPostModal(){
               </div>
             </Tooltip>
           </div>
-          <Button variant="contained" color="primary" className="bg-sky-500 rounded-full" >โพส</Button>
+          <Button variant="contained" color="primary" >โพส</Button>
         </DialogActions>
     </Dialog>
   )

@@ -7,7 +7,7 @@ import { theme1 } from "./Theme";
 export default function Layout({children,rightbar}){
   return (
     <ThemeProvider theme={theme1}>
-      <Container className="relative max-sm:p-0">
+      <Container sx={{p:{xs:0}}}>
         <div className="flex w-full  justify-center">
           <Leftbar  />
           <div className="w-6/12  max-lg:w-8/12 max-sm:w-full max-lg:border-r border-gray-100">
