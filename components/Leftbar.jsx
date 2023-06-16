@@ -56,7 +56,7 @@ const pageIcons = [
 
 const listt = () => {
   return (
-    <div className="flex flex-col gap-2 lg:gap-4 p-5">
+    <div className="flex flex-col gap-2 lg:gap-3 p-5 pb-0">
       {pages.map((page, index) => {
         return (
           <Link
@@ -118,6 +118,7 @@ export default function Leftbar() {
                   bgcolor: 'rgb(14 165 233)',
                   transform: 'scale(0.75)',
                 }}
+                onClick={() => setNewPostModalOpen(true)}
               >
                 <CreateRoundedIcon />
               </Button>
