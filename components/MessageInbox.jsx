@@ -15,17 +15,27 @@ import { useState } from 'react';
 export default function MessageInbox() {
   const [messageList,setMessageList] = useState(["Hello","world"])
   const [message,setMessage] = useState("")
-  const sendMessage = ()=>{
-    if(message!=""){
-      setMessageList([...messageList,message])
-      setMessage("")
+  const setScroolToBottom = ()=>{
+    if((document.getElementById("messageInBox")?.scrollHeight - document.body?.scrollHeight) > 0)
+    {
+      document.getElementById("messageInBox")?.scrollTo(
+        0,
+        (document.getElementById("messageInBox")?.scrollHeight)
+        )
     }
   }
-
+  const sendMessage = async()=>{
+    if(message!=""){
+      await setMessageList([...messageList,message])
+      await setMessage("")
+      await setScroolToBottom()
+    }
+  }
+  
   return (
-      <div className="w-full grid grid-cols-1 h-screen border-r border-gray-100">
-        <div className="messageInBox flex flex-col gap-2 p-3 items-end">
-          { messageList.map((val,index)=><Zoom key={"message"+index} in={true}><Chip sx={{width:"fit-content"}} label={val} /></Zoom>)}
+      <div className="w-full grid grid-cols-1 h-screen border-r border-gray-100 overflow-hidden">
+        <div id="messageInBox" className="flex flex-col w-full gap-2 p-3 items-end overflow-x-hidden  overflow-y-auto">
+          { messageList.map((val,index)=><Zoom key={"message"+index} in={true}><div className="bg-stone-200 p-2 rounded-2xl w-fit max-w-full break-words	" >{val}</div></Zoom>)}
         </div>
         <div className="p-3 w-full self-end border-t border-gray-100 ">
           <FormControl fullWidth>
