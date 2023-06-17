@@ -10,7 +10,7 @@ export default function List() {
     <Layout rightbar={<Rightbar />}>
       <HeadSearch
         leftIcon={
-          <IconButton color="secondary">
+          <IconButton href="/" color="secondary">
             <ArrowBackRoundedIcon />
           </IconButton>
         }

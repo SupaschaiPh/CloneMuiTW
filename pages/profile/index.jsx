@@ -3,14 +3,14 @@ import Rightbar from '../../components/Rightbar';
 import ArrowBackRoundedIcon from '@mui/icons-material/ArrowBackRounded';
 import PostAddRoundedIcon from '@mui/icons-material/PostAddRounded';
 import MoreHorizRoundedIcon from '@mui/icons-material/MoreHorizRounded';
-import { Avatar, Button, ButtonGroup, IconButton, Tab, Tabs } from '@mui/material';
+import { Avatar, Button, ButtonGroup, IconButton, Link, Tab, Tabs } from '@mui/material';
 import Head from '../../components/Head';
 import { useState } from 'react';
 export default function Profile() {
   const [indexTab, setIndexTab] = useState(0);
   return (
     <Layout rightbar={<Rightbar />}>
-      <Head name="Profile" leftIcon={<ArrowBackRoundedIcon/>} />
+      <Head name="Profile" leftIcon={<Link color="secondary" href="/" ><ArrowBackRoundedIcon/></Link>} />
       <div id="profileDetail" className="border-b border-gray-100">
         <div id="profileCover" className="relative ">
           <div style={{backgroundImage:"url('https://media.discordapp.net/attachments/1115309410756067428/1117858185643053206/noddle2.jpg')"}} className="h-52">

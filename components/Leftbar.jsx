@@ -33,14 +33,15 @@ const pages = [
   'เพิ่มเติม',
 ];
 const hrefPages = [
+  '/',
+  '/explore',
+  '/notifications',
+  '/messages',
+  '/lists',
+  '/bookmarks',
   '',
-  'explore',
-  'notifications',
-  'messages',
-  'lists',
-  'bookmarks',
-  '',
-  'profile'
+  '/profile',
+  ''
 ];
 const pageIcons = [
   <HomeRoundedIcon color="secondary" fontSize="large" />,
@@ -62,7 +63,7 @@ const listt = () => {
           <Link
             sx={{ justifyContent: { sm: 'center' } }}
             key={'Rightbar' + index}
-            href={'/' + (hrefPages[index] ? hrefPages[index] : '')}
+            href={(hrefPages[index] ? hrefPages[index] : '')}
             underline="none"
           >
             <div className="hidden max-lg:flex text-black w-full justify-center p-0 lg:p-2">
