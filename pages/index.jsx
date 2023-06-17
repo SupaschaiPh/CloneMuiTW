@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 import Head from '../components/Head';
 import Layout from '../components/Layout';
 import Post from '../components/Post';
@@ -6,8 +6,14 @@ import styles from '../styles/Home.module.css';
 import ReportRoundedIcon from '@mui/icons-material/ReportRounded';
 import { Typography } from '@mui/material';
 import Rightbar from '../components/Rightbar';
-
-export default function Home() {
+/*
+export async function getServerSideProps() {
+  const res = await fetch("//api/posts")
+  const postsList = await res.json()
+  return { props: { postsList } }
+}
+*/
+function Home({ postsList }) {
   const [indexTab, setIndexTab] = useState(0);
   const sample = () => {
     if (indexTab == 0) {
@@ -47,8 +53,12 @@ export default function Home() {
       return (
         <div className="w-full flex flex-col items-center p-5 text-3xl">
           <div>
-            <Typography variant="h5" className="font-sans font-bold">ยังไม่มีอะไรให้ดูที่นี่</Typography>
-            <Typography  className="font-sans font-bold text-gray-500">เมื่อมีคนพูดถึงคุณ คุณจะพบได้ที่นี่</Typography>
+            <Typography variant="h5" className="font-sans font-bold">
+              ยังไม่มีอะไรให้ดูที่นี่
+            </Typography>
+            <Typography className="font-sans font-bold text-gray-500">
+              เมื่อมีคนพูดถึงคุณ คุณจะพบได้ที่นี่
+            </Typography>
           </div>
         </div>
       );
@@ -66,3 +76,7 @@ export default function Home() {
     </Layout>
   );
 }
+
+
+
+export default Home;
