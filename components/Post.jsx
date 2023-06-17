@@ -34,19 +34,19 @@ export default function Post({
         <div className="w-full overflow-hidden">
           <div className="flex w-full pl-3 overflow-hidden">
             <div className="flex gap-2 items-center w-11/12 truncate">
-              <Typography className="font-bold font-sans">
+              <p className="font-bold">
                 {displayName}
-              </Typography>
-              <Typography className="font-sans text-gray-400 font-light">
+              </p>
+              <p className="text-gray-400 font-light">
                 {userName}
-              </Typography>
+              </p>
               <FiberManualRecordRoundedIcon
                 sx={{ fontSize: 5 }}
                 fontSize="small"
               />
-              <Typography>
+              <p className="text-gray-400 font-light">
                 {postTime}.
-              </Typography>
+              </p>
             </div>
             <div className="w-1/12">
               <Tooltip id={'postMore' + moreId} title="เพิ่มเติม">

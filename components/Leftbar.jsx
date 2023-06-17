@@ -72,9 +72,11 @@ const listt = () => {
             <div className="max-lg:hidden gap-3 rounded-full text-xl font-semibold text-black pr-2 pl-2">
               <Button
                 color="secondary"
-                startIcon={<div className="text-xl">{pageIcons[index]}</div>}
+                startIcon={pageIcons[index]}
+                size="large"
+                sx={{fontSize:"1.2rem"}}
               >
-                {page}
+                <div><p>{page}</p></div>
               </Button>
             </div>
           </Link>
@@ -99,7 +101,6 @@ export default function Leftbar() {
           <div className="flex w-full justify-center lg:justify-start lg:ml-6">
             <IconButton>
               <Avatar
-                className="h-8 w-8"
                 src="https://img.freepik.com/free-photo/white-cloud-blue-sky_74190-7709.jpg"
               />
             </IconButton>

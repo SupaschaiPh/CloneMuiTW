@@ -14,8 +14,8 @@ export default function NewPostModal(){
   const {newPostModalOpen,setNewPostModalOpen} = useContext(ModalContext)
   const [postScope,setPostScope] = useState(0)
   const descPostScope = [
-    <Link underline="none" className="text-sm items-center" ><PublicRoundedIcon className="text-base" /> ทุกคนสามารถตอบกลับได้</Link>,
-    <Link underline="none" className="text-sm text-sky-600/60 items-center" ><LockRoundedIcon className="text-base" /> เฉพาะวงใน Twitter ที่ติดตามคุณเท่านั้นที่สามารถตอบกลับได้</Link>
+    <Link underline="none" fontSize="small" ><PublicRoundedIcon className="text-base" /> ทุกคนสามารถตอบกลับได้</Link>,
+    <Link underline="none" fontSize="small"><LockRoundedIcon className="text-base" /> เฉพาะวงใน Twitter ที่ติดตามคุณเท่านั้นที่สามารถตอบกลับได้</Link>
   ]
   return (
     <Dialog
