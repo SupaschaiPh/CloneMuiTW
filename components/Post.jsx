@@ -84,7 +84,7 @@ export default function Post({
             </div>
           </div>
           <div>
-            <div className="pr-3 pl-3" ><div>{content}</div></div>
+            <div className="pr-3 pl-3" ><p>{content}</p></div>
           </div>
           {img ? (
             <div className="p-3 pb-0 pt-2">
