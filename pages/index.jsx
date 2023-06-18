@@ -7,8 +7,13 @@ import ReportRoundedIcon from '@mui/icons-material/ReportRounded';
 import { Typography } from '@mui/material';
 import Rightbar from '../components/Rightbar';
 /*
+ติด Cors
 export async function getServerSideProps() {
-  const res = await fetch("//api/posts")
+  const res = await fetch("https://stackblitzstarterstoqckw-zysb--3000--77657b1e.local-credentialless.webcontainer.io/api/posts",{
+    headers:{
+
+    }
+  })
   const postsList = await res.json()
   return { props: { postsList } }
 }
